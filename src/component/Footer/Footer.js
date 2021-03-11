@@ -8,13 +8,13 @@ const Footer = (props) => {
     return (
         <div>
             <Col className='d-flex justify-content-center mt-2' style={{ height: '50px',margin:'10px' }}>
-                <a href={strFacebook} className='pl-5'>
+                <a href={`http://${strFacebook}`} className='pl-5'>
                     <FontAwesomeIcon icon={faFacebook}></FontAwesomeIcon>
                 </a>
-                <a href={strTwitter}className='pl-5'>
+                <a href={`http://${strTwitter}`}className='pl-5'>
                     <FontAwesomeIcon icon={faTwitter}></FontAwesomeIcon>
                 </a>
-                <a href={strYoutube}className='pl-5'>
+                <a href={`http://${strYoutube}`}className='pl-5'>
                     <FontAwesomeIcon icon={faYoutube}></FontAwesomeIcon>
                 </a>
             </Col>
