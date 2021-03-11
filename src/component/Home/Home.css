@@ -1,0 +1,15 @@
+.header {
+    background-image: url("../../images/header-img.jpg");
+    height: 362px;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    position: relative;
+}
+
+.header-text {
+    font-size: 30px;
+    text-align: center;
+    padding-top: 100px;
+    color: white;
+}
