@@ -6,7 +6,6 @@ import { Col, Container, Image, Row } from 'react-bootstrap';
 import Footer from '../Footer/Footer';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faFlag, faFutbol, faMapMarker, faMars } from '@fortawesome/free-solid-svg-icons';
-import Header from '../Header/Header';
 
 const TeamDescription = () => {
     const { teamid } = useParams();
@@ -17,7 +16,7 @@ const TeamDescription = () => {
             .then(res => res.json())
             .then(data => setTeamDescription(data.teams[0]))
     }, [teamid])
-    console.log(teamDescription);
+    // console.log(teamDescription);
     const { strTeam,strLeague, intFormedYear, strCountry, strGender, strSport, strTeamBadge, strDescriptionEN,  strTeamBanner } = teamDescription;
     const genderImage = strGender === "Female" ?female : male ;
     return (
@@ -30,6 +29,7 @@ const TeamDescription = () => {
             <Row className="team-detail mt-5" style={{backgroundColor: '#3A42FF',borderRadius:'5px',padding:'5px'}}>
                 <Col className="mt-5">
                     <h4>{strLeague}</h4>
+                    <h3>{strTeam}</h3>
                     <p> <FontAwesomeIcon icon={faMapMarker}></FontAwesomeIcon> Founded:{intFormedYear}</p>
                     <p><FontAwesomeIcon icon={faFlag}></FontAwesomeIcon> Country:{strCountry}</p>
                     <p><FontAwesomeIcon icon={faFutbol}></FontAwesomeIcon> Sport Type:{strSport}</p>
